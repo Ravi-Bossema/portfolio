@@ -50,13 +50,14 @@ export default function Navbar() {
 						label="Language"
 						onChange={handleLanguageChange}
 					>
-						{languages.map((lang) => {
-							return <MenuItem value={lang}>{lang}</MenuItem>;
+						{languages.map((lang, i) => {
+							return (
+								<MenuItem key={i} value={lang}>
+									{lang}
+								</MenuItem>
+							);
 						})}
 					</Select>
-					<Box sx={{ flex: 0.15, paddingLeft: 2 }}>
-						<ThemeSwitch />
-					</Box>
 				</Toolbar>
 			</AppBar>
 		</Slide>

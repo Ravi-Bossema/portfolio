@@ -1,13 +1,14 @@
+import { ThemeProvider } from '@mui/material';
 import React from 'react';
 import { About, Navbar, Projects } from './components';
+import { theme } from './theme';
 
 export default function App() {
-	const hump = 15;
 	return (
-		<main style={{ height: hump }}>
+		<ThemeProvider theme={theme}>
 			<Navbar />
 			<About />
 			<Projects />
-		</main>
+		</ThemeProvider>
 	);
 }

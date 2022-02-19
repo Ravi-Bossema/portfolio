@@ -28,6 +28,7 @@ export const DSTheme = createTheme({
 				root: {
 					backgroundColor: 'transparent',
 					backdropFilter: 'blur(10px)',
+					backgroundImage: 'none',
 				},
 			},
 		},
@@ -65,6 +66,7 @@ export const BardTheme = createTheme({
 				root: {
 					backgroundColor: 'transparent',
 					backdropFilter: 'blur(10px)',
+					backgroundImage: 'none',
 				},
 			},
 		},

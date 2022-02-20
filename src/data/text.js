@@ -5,5 +5,5 @@ export const sections = {
 
 export const introText = {
 	English: { Hi: 'Hi,', Im: "I'm Ravi,", Dev: 'Software Developer' },
-	Nederlands: { Hi: 'Hi,', Im: 'Ik ben Ravi,', Dev: 'Software Developer' },
+	Nederlands: { Hi: 'Hoi,', Im: 'Ik ben Ravi,', Dev: 'Software Developer' },
 };

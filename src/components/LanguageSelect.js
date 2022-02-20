@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import { MenuItem, Select } from '@mui/material';
 import { useLanguage, getSelectedLanguage } from '../LanguageProvider';
 
 export default function LanguageSelect(props) {

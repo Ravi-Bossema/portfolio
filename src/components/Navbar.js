@@ -1,36 +1,27 @@
 import React from 'react';
-import { useState } from 'react';
 import {
 	AppBar,
 	Box,
 	Button,
-	MenuItem,
-	Select,
 	Slide,
 	Toolbar,
 	useScrollTrigger,
 } from '@mui/material';
-import { ThemeSwitch } from '.';
+import { LanguageSelect } from '.';
+import { sections } from '../data/text';
+import { useLanguage, getSelectedLanguage } from '../LanguageProvider';
 
 export default function Navbar() {
 	const scrollTrigger = useScrollTrigger();
 
-	// --- Change for functionality ---
-	const sections = ['About', 'Projects', 'Experience', 'Contact'];
-	const languages = ['English', 'Nederlands'];
-
-	const [language, setLanguage] = useState('English');
-
-	const handleLanguageChange = (event) => {
-		setLanguage(event.target.value);
-	};
-	// ---------------
+	const { languages } = useLanguage();
+	const selectedLanguage = getSelectedLanguage(languages)[0].name;
 
 	return (
 		<Slide in={!scrollTrigger}>
 			<AppBar>
 				<Toolbar>
-					{sections.map((section, i) => {
+					{sections[selectedLanguage].map((section, i) => {
 						return (
 							<Button
 								key={i}
@@ -42,22 +33,7 @@ export default function Navbar() {
 						);
 					})}
 					<Box sx={{ flex: 1 }} />
-					<Select
-						sx={{ flex: 0.4, maxWidth: 200 }}
-						labelId="demo-simple-select-disabled-label"
-						id="demo-simple-select-disabled"
-						value={language}
-						label="Language"
-						onChange={handleLanguageChange}
-					>
-						{languages.map((lang, i) => {
-							return (
-								<MenuItem key={i} value={lang}>
-									{lang}
-								</MenuItem>
-							);
-						})}
-					</Select>
+					<LanguageSelect sx={{ flex: 0.4, maxWidth: 200 }} />
 				</Toolbar>
 			</AppBar>
 		</Slide>

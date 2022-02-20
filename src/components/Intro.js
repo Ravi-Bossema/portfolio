@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Container, Link, Typography } from '@mui/material';
 import { useLanguage, getSelectedLanguage } from '../LanguageProvider';
 import { introText } from '../data/text';
 
@@ -9,17 +9,28 @@ export default function ViewContainer() {
 	return (
 		<Box
 			sx={{
-				minHeight: window.innerHeight,
 				bgcolor: 'background.default',
 				color: 'text.primary',
-				paddingTop: 20,
+				paddingTop: 30,
+				paddingBottom: 50,
 			}}
 		>
 			<Container>
-				<Typography variant="h2" component="div" gutterBottom>
+				<Typography variant="h2" gutterBottom>
 					{introText[selectedLanguage].Hi} <br />
 					{introText[selectedLanguage].Im} <br />
 					{introText[selectedLanguage].Dev}
+				</Typography>
+				<Typography variant="h5">
+					{introText[selectedLanguage].Text}
+					<Link
+						href="https://www.magnus.nl"
+						variant="h5"
+						underline="hover"
+					>
+						Magnus
+					</Link>
+					.
 				</Typography>
 			</Container>
 		</Box>

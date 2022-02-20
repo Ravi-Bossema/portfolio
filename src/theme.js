@@ -70,6 +70,13 @@ export const BardTheme = createTheme({
 				},
 			},
 		},
+		MuiLink: {
+			styleOverrides: {
+				root: {
+					color: '#124d53',
+				},
+			},
+		},
 		MuiTooltip: {
 			arrow: true,
 		},

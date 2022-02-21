@@ -6,6 +6,9 @@ import { introText } from '../data/text';
 export default function ViewContainer() {
 	const { languages } = useLanguage();
 	const selectedLanguage = getSelectedLanguage(languages)[0].name;
+
+	const text = introText[selectedLanguage];
+
 	return (
 		<Box
 			sx={{
@@ -17,21 +20,11 @@ export default function ViewContainer() {
 		>
 			<Container>
 				<Typography variant="h2" gutterBottom>
-					{introText[selectedLanguage].Hi} <br />
-					{introText[selectedLanguage].Im} <br />
-					{introText[selectedLanguage].Dev}
+					{text.Hi} <br />
+					{text.Im} <br />
+					{text.Dev}
 				</Typography>
-				<Typography variant="h5">
-					{introText[selectedLanguage].Text}
-					<Link
-						href="https://www.magnus.nl"
-						variant="h5"
-						underline="hover"
-					>
-						Magnus
-					</Link>
-					.
-				</Typography>
+				<Typography variant="h5">{text.Body}</Typography>
 			</Container>
 		</Box>
 	);

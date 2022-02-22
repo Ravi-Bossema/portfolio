@@ -76,3 +76,12 @@ export const aboutText = {
 		],
 	},
 };
+
+export const projectsText = {
+	English: {
+		Title: 'Projects',
+	},
+	Nederlands: {
+		Title: 'Projecten',
+	},
+};

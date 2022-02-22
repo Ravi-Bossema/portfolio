@@ -27,7 +27,7 @@ export default function About() {
 			}}
 		>
 			<Container>
-				<Divider textAlign="right">
+				<Divider textAlign="right" sx={{ marginBottom: 10 }}>
 					<Typography variant="h2">{text.Title}</Typography>
 				</Divider>
 				<Card

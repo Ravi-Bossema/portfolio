@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Link, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import { useLanguage, getSelectedLanguage } from '../LanguageProvider';
 import { introText } from '../data/text';
 

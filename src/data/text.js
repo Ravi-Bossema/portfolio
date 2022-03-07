@@ -96,3 +96,12 @@ export const projectsText = {
 		],
 	},
 };
+
+export const contactText = {
+	English: {
+		Title: 'Get In Touch',
+	},
+	Nederlands: {
+		Title: 'Neem Contact Op',
+	},
+};

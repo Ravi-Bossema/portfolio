@@ -27,7 +27,7 @@ export default function Projects() {
 				</Divider>
 				<Top3Container Project={top3[0]['English']} left={true} />
 				<Top3Container Project={top3[0]['English']} left={false} />
-				<Typography variant="h6" align="center">
+				<Typography variant="h6" align="center" sx={{ marginTop: 5 }}>
 					{text.Archive}
 				</Typography>
 			</Container>

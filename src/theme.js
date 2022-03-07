@@ -46,7 +46,7 @@ export const BardTheme = createTheme({
 			contrastText: '#090b1c',
 		},
 		secondary: {
-			main: '#8c3432',
+			main: '#c694da',
 		},
 		background: {
 			default: '#090b1c',
@@ -73,7 +73,7 @@ export const BardTheme = createTheme({
 		MuiLink: {
 			styleOverrides: {
 				root: {
-					color: '#8c3432',
+					color: '#DA94CB',
 				},
 			},
 		},

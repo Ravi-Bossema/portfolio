@@ -9,7 +9,7 @@ import {
 	Typography,
 } from '@mui/material';
 import { useLanguage, getSelectedLanguage } from '../LanguageProvider';
-import { aboutText } from '../data/text';
+import { aboutText, sections } from '../data/text';
 import ProfilePicture from '../images/ProfilePicture.jpeg';
 
 export default function About() {
@@ -17,9 +17,11 @@ export default function About() {
 	const selectedLanguage = getSelectedLanguage(languages)[0].name;
 
 	const text = aboutText[selectedLanguage];
+	const title = sections[selectedLanguage][0];
 
 	return (
 		<Box
+			id={title}
 			sx={{
 				bgcolor: 'background.default',
 				color: 'text.primary',
@@ -28,7 +30,7 @@ export default function About() {
 		>
 			<Container>
 				<Divider textAlign="right" sx={{ marginBottom: 10 }}>
-					<Typography variant="h2">{text.Title}</Typography>
+					<Typography variant="h2">{title}</Typography>
 				</Divider>
 				<Card
 					sx={{

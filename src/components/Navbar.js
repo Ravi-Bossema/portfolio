@@ -27,6 +27,7 @@ export default function Navbar() {
 								key={i}
 								color="inherit"
 								sx={{ flex: 0.25, maxWidth: 200 }}
+								href={'.#' + section}
 							>
 								{section}
 							</Button>

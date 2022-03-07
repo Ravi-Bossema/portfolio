@@ -1,7 +1,7 @@
 import React from 'react';
-import { Box, Container, Divider, Typography } from '@mui/material';
+import { Box, Container, Divider, Link, Typography } from '@mui/material';
 import { useLanguage, getSelectedLanguage } from '../LanguageProvider';
-import { projectsText } from '../data/text';
+import { projectsText, sections } from '../data/text';
 import { top3 } from '../data/projects';
 import { Top3Container } from '.';
 
@@ -10,9 +10,11 @@ export default function Projects() {
 	const selectedLanguage = getSelectedLanguage(languages)[0].name;
 
 	const text = projectsText[selectedLanguage];
+	const title = sections[selectedLanguage][1];
 
 	return (
 		<Box
+			id={title}
 			sx={{
 				bgcolor: 'background.default',
 				color: 'text.primary',
@@ -21,10 +23,13 @@ export default function Projects() {
 		>
 			<Container>
 				<Divider textAlign="left" sx={{ marginBottom: 10 }}>
-					<Typography variant="h2">{text.Title}</Typography>
+					<Typography variant="h2">{title}</Typography>
 				</Divider>
 				<Top3Container Project={top3[0]['English']} left={true} />
 				<Top3Container Project={top3[0]['English']} left={false} />
+				<Typography variant="h6" align="center">
+					{text.Archive}
+				</Typography>
 			</Container>
 		</Box>
 	);

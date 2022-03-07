@@ -1,8 +1,9 @@
 import { Link } from '@mui/material';
 
 export const sections = {
-	English: ['About', 'Projects', 'Experience', 'Contact'],
-	Nederlands: ['Over mij', 'Projecten', 'Ervaring', 'Contact'],
+	// Add experience later
+	English: ['About', 'Projects', 'Contact'],
+	Nederlands: ['Over mij', 'Projecten', 'Contact'],
 };
 
 export const introText = {
@@ -44,7 +45,6 @@ export const introText = {
 
 export const aboutText = {
 	English: {
-		Title: 'About',
 		Body: [
 			"For as long as I can remember I've had a strong passion for making things. ",
 			'Whether it was building Legos, sculpting with clay, or drawing pictures, I loved it. ',
@@ -60,7 +60,6 @@ export const aboutText = {
 		],
 	},
 	Nederlands: {
-		Title: 'Over mij',
 		Body: [
 			'Al zolang ik mij kan herinneren heb ik een sterke passie gehad voor dingen maken. ',
 			'Of het nou ging om bouwen met Legos, lekker kleien, of tekenen, ik hield er van. ',
@@ -79,9 +78,21 @@ export const aboutText = {
 
 export const projectsText = {
 	English: {
-		Title: 'Projects',
+		Archive: [
+			'Or ',
+			<Link href="/archive" underline="hover">
+				view the archive
+			</Link>,
+			' for more noteworthy projects.',
+		],
 	},
 	Nederlands: {
-		Title: 'Projecten',
+		Archive: [
+			'Of ',
+			<Link href="/archive" underline="hover">
+				zie het archief
+			</Link>,
+			' voor nog meer projecten.',
+		],
 	},
 };

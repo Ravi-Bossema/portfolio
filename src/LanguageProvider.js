@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 
-const availableLanguages = [
-	{ name: 'English', selected: true },
-	{ name: 'Nederlands', selected: false },
-];
-
 const LanguageContext = React.createContext();
 
 const LanguageProvider = (props) => {
-	const [languages, updateLanguage] = useState([...availableLanguages]);
+	const localLanguage = localStorage.getItem('Language');
 
-	// Add Persistent Language Support
+	const availableLanguages = [
+		{
+			name: 'English',
+			selected: localLanguage ? localLanguage === 'English' : true,
+		},
+		{
+			name: 'Nederlands',
+			selected: localLanguage ? localLanguage === 'Nederlands' : false,
+		},
+	];
+	const [languages, updateLanguage] = useState([...availableLanguages]);
 
 	return (
 		<LanguageContext.Provider
@@ -20,6 +25,7 @@ const LanguageProvider = (props) => {
 					updateLanguage((prevState) => {
 						return prevState.map((item) => {
 							if (item?.name === name) {
+								localStorage.setItem('Language', item.name);
 								item.selected = true;
 							} else {
 								item.selected = false;
@@ -37,7 +43,7 @@ const LanguageProvider = (props) => {
 };
 
 const getSelectedLanguage = (lang) => lang?.filter((item) => item.selected);
-export { availableLanguages, getSelectedLanguage };
+export { getSelectedLanguage };
 const useLanguage = () => React.useContext(LanguageContext);
 export { LanguageContext, useLanguage };
 export default LanguageProvider;

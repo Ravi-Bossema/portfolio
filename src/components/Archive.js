@@ -5,6 +5,7 @@ import { archiveText } from '../data/text';
 import { projects } from '../data/projects';
 import { useLanguage, getSelectedLanguage } from '../LanguageProvider';
 import { GitHub, OpenInNew } from '@mui/icons-material';
+import { AppleStore, GooglePlay } from '../images/icons';
 
 export default function Archive() {
 	const { languages } = useLanguage();
@@ -58,6 +59,26 @@ export default function Archive() {
 						size="large"
 					>
 						<OpenInNew color="secondary" fontSize="inherit" />
+					</IconButton>
+				) : null}
+				{params.value.play ? (
+					<IconButton
+						aria-label="Google Play"
+						href={params.value.play}
+						target="_blank"
+						size="large"
+					>
+						<GooglePlay color="secondary" fontSize="inherit" />
+					</IconButton>
+				) : null}
+				{params.value.play ? (
+					<IconButton
+						aria-label="Apple App store"
+						href={params.value.play}
+						target="_blank"
+						size="large"
+					>
+						<AppleStore color="secondary" fontSize="inherit" />
 					</IconButton>
 				) : null}
 			</>

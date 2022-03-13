@@ -74,7 +74,7 @@ export default function Archive() {
 				{params.value.play ? (
 					<IconButton
 						aria-label="Apple App store"
-						href={params.value.play}
+						href={params.value.apple}
 						target="_blank"
 						size="large"
 					>

@@ -1,8 +1,12 @@
 import React from 'react';
 import { Box, Card, CardContent, IconButton, Typography } from '@mui/material';
 import { GitHub, OpenInNew } from '@mui/icons-material';
+import { useLanguage, getSelectedLanguage } from '../LanguageProvider';
 
 export default function Top3Container({ Project, left }) {
+	const { languages } = useLanguage();
+	const selectedLanguage = getSelectedLanguage(languages)[0].name;
+
 	const { Title, Summary, Tech, Git, Url, Img } = Project;
 
 	return left ? (
@@ -18,7 +22,7 @@ export default function Top3Container({ Project, left }) {
 		>
 			<img
 				src={Img}
-				alt={Title}
+				alt={Title[selectedLanguage]}
 				style={{ borderRadius: 4, width: 600 }}
 			/>
 			<Box
@@ -39,7 +43,7 @@ export default function Top3Container({ Project, left }) {
 					}}
 					variant="h4"
 				>
-					{Title}
+					{Title[selectedLanguage]}
 				</Typography>
 				<Card
 					sx={{
@@ -51,7 +55,9 @@ export default function Top3Container({ Project, left }) {
 					}}
 				>
 					<CardContent>
-						<Typography variant="body1">{Summary}</Typography>
+						<Typography variant="body1">
+							{Summary[selectedLanguage]}
+						</Typography>
 					</CardContent>
 				</Card>
 				<Typography
@@ -112,7 +118,7 @@ export default function Top3Container({ Project, left }) {
 		>
 			<img
 				src={Img}
-				alt={Title}
+				alt={Title[selectedLanguage]}
 				style={{
 					borderRadius: 4,
 					width: 600,
@@ -136,7 +142,7 @@ export default function Top3Container({ Project, left }) {
 					}}
 					variant="h4"
 				>
-					{Title}
+					{Title[selectedLanguage]}
 				</Typography>
 				<Card
 					sx={{
@@ -148,7 +154,9 @@ export default function Top3Container({ Project, left }) {
 					}}
 				>
 					<CardContent>
-						<Typography variant="body1">{Summary}</Typography>
+						<Typography variant="body1">
+							{Summary[selectedLanguage]}
+						</Typography>
 					</CardContent>
 				</Card>
 				<Typography

@@ -1,6 +1,7 @@
 import React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { Box, Container, IconButton, styled, Typography } from '@mui/material';
+import { archiveText } from '../data/text';
 import { projects } from '../data/projects';
 import { useLanguage, getSelectedLanguage } from '../LanguageProvider';
 import { GitHub, OpenInNew } from '@mui/icons-material';
@@ -12,11 +13,20 @@ export default function Archive() {
 	const padding = 20;
 	const height = window.innerHeight - 16 * padding;
 
-	const data = projects[selectedLanguage];
+	const text = archiveText[selectedLanguage];
+	const data = projects;
 	const rows = data.map((row, id) => Object.assign(row, { id }));
 
 	function renderHeader(params) {
 		return <Typography variant="h6">{params.colDef.headerName}</Typography>;
+	}
+
+	function renderTitle(params) {
+		return (
+			<Typography variant="body1">
+				{params.value[selectedLanguage]}
+			</Typography>
+		);
 	}
 
 	function renderTech(params) {
@@ -57,7 +67,7 @@ export default function Archive() {
 	const columns = [
 		{
 			field: 'Year',
-			headerName: 'Year',
+			headerName: text.Year,
 			type: 'date',
 			flex: 0.05,
 			sortable: false,
@@ -65,14 +75,15 @@ export default function Archive() {
 		},
 		{
 			field: 'Title',
-			headerName: 'Title',
+			headerName: text.Title,
 			flex: 0.2,
 			sortable: false,
 			renderHeader: renderHeader,
+			renderCell: renderTitle,
 		},
 		{
 			field: 'Tech',
-			headerName: 'Built with',
+			headerName: text.Tech,
 			flex: 0.55,
 			sortable: false,
 			renderHeader: renderHeader,
@@ -80,7 +91,7 @@ export default function Archive() {
 		},
 		{
 			field: 'Links',
-			headerName: 'Link',
+			headerName: text.Link,
 			flex: 0.15,
 			sortable: false,
 			renderHeader: renderHeader,

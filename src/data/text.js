@@ -97,6 +97,21 @@ export const projectsText = {
 	},
 };
 
+export const archiveText = {
+	English: {
+		Year: 'Year',
+		Title: 'Title',
+		Tech: 'Built With',
+		Link: 'Links',
+	},
+	Nederlands: {
+		Year: 'Jaar',
+		Title: 'Titel',
+		Tech: 'Gemaakt Met',
+		Link: 'Links',
+	},
+};
+
 export const contactText = {
 	English: {
 		Title: 'Get In Touch',

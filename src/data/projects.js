@@ -41,7 +41,10 @@ export const top3 = [
 
 export const projects = [
 	{
-		Title: { English: 'One', Nederlands: 'Een' },
+		Title: {
+			English: 'One',
+			Nederlands: 'Huisartsen KennisQuiz App Update',
+		},
 		Year: 2020,
 		Tech: ['React', 'JavaScript'],
 		Links: { git: 'https://github.com/Ravi-Bossema', url: '' },

@@ -23,7 +23,7 @@ export default function Archive() {
 
 	function renderTitle(params) {
 		return (
-			<Typography variant="body1">
+			<Typography variant="body1" fontWeight={'bold'}>
 				{params.value[selectedLanguage]}
 			</Typography>
 		);
@@ -31,7 +31,7 @@ export default function Archive() {
 
 	function renderTech(params) {
 		return (
-			<Typography variant="overline">
+			<Typography variant="overline" color="text.secondary">
 				{params.value.join(' | ')}
 			</Typography>
 		);
@@ -47,7 +47,7 @@ export default function Archive() {
 						target="_blank"
 						size="large"
 					>
-						<GitHub color="primary" fontSize="inherit" />
+						<GitHub color="secondary" fontSize="inherit" />
 					</IconButton>
 				) : null}
 				{params.value.url ? (
@@ -57,7 +57,7 @@ export default function Archive() {
 						target="_blank"
 						size="large"
 					>
-						<OpenInNew color="primary" fontSize="inherit" />
+						<OpenInNew color="secondary" fontSize="inherit" />
 					</IconButton>
 				) : null}
 			</>
@@ -76,7 +76,7 @@ export default function Archive() {
 		{
 			field: 'Title',
 			headerName: text.Title,
-			flex: 0.2,
+			flex: 0.25,
 			sortable: false,
 			renderHeader: renderHeader,
 			renderCell: renderTitle,
@@ -84,7 +84,7 @@ export default function Archive() {
 		{
 			field: 'Tech',
 			headerName: text.Tech,
-			flex: 0.55,
+			flex: 0.5,
 			sortable: false,
 			renderHeader: renderHeader,
 			renderCell: renderTech,
@@ -92,7 +92,7 @@ export default function Archive() {
 		{
 			field: 'Links',
 			headerName: text.Link,
-			flex: 0.15,
+			flex: 0.12,
 			sortable: false,
 			renderHeader: renderHeader,
 			renderCell: renderLinks,
@@ -103,6 +103,9 @@ export default function Archive() {
 		&.MuiDataGrid-root .MuiDataGrid-columnHeader:focus,
 		&.MuiDataGrid-root .MuiDataGrid-cell:focus {
 			outline: none;
+		}
+		&.MuiDataGrid-root .MuiDataGrid-columnHeaderTitleContainer {
+			padding: 0;
 		}
 		&.MuiDataGrid-root .MuiDataGrid-columnSeparator {
 			display: none;
@@ -118,7 +121,20 @@ export default function Archive() {
 				minHeight: height,
 			}}
 		>
-			<Container sx={{ height: '100%', display: 'flex' }}>
+			<Container
+				sx={{
+					height: '100%',
+					display: 'flex',
+					flexDirection: 'column',
+				}}
+			>
+				<Typography variant="h1" paragraph>
+					{text.Archive}
+				</Typography>
+				<Typography variant="h6" paragraph>
+					{text.Intro}
+				</Typography>
+				<br />
 				<StyledDataGrid
 					sx={{ border: 'none' }}
 					columns={columns}

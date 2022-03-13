@@ -99,12 +99,16 @@ export const projectsText = {
 
 export const archiveText = {
 	English: {
+		Archive: 'Archive',
+		Intro: "Here are some of the projects I've built.",
 		Year: 'Year',
 		Title: 'Title',
 		Tech: 'Built With',
 		Link: 'Links',
 	},
 	Nederlands: {
+		Archive: 'Archief',
+		Intro: 'Hier zijn een aantal van de projecten waaraan ik gewerkt heb.',
 		Year: 'Jaar',
 		Title: 'Titel',
 		Tech: 'Gemaakt Met',

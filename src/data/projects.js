@@ -16,16 +16,32 @@ export const top3 = [
 				<Link href="https://mui.com" target="_blank" underline="hover">
 					Material UI library
 				</Link>,
-				'.',
+				' and hosted with ',
+				<Link
+					href="https://www.netlify.com"
+					target="_blank"
+					underline="hover"
+				>
+					Netlify
+				</Link>,
+				' .',
 			],
 			Nederlands: [
 				'Ten eerste heb ik deze portfolio website gebouwd in React ',
 				" om mijn projecten te laten zien aan eventuele toekomstige werkgevers en collega's. ",
-				'Dit project is grotendeels gemaakt met de ',
+				'Dit project is grotendeels gemaakt met behulp van de ',
 				<Link href="https://mui.com" target="_blank" underline="hover">
 					Material UI library
 				</Link>,
-				'.',
+				' en gehost met ',
+				<Link
+					href="https://www.netlify.com"
+					target="_blank"
+					underline="hover"
+				>
+					Netlify
+				</Link>,
+				' .',
 			],
 		},
 		Tech: ['React', 'JavaScript', 'CSS'],

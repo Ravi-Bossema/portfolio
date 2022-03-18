@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Divider, Link, Typography } from '@mui/material';
+import { Box, Container, Divider, Typography } from '@mui/material';
 import { useLanguage, getSelectedLanguage } from '../LanguageProvider';
 import { projectsText, sections } from '../data/text';
 import { top3 } from '../data/projects';
@@ -26,7 +26,7 @@ export default function Projects() {
 					<Typography variant="h2">{title}</Typography>
 				</Divider>
 				<Top3Container Project={top3[0]} left={true} />
-				<Top3Container Project={top3[0]} left={false} />
+				<Top3Container Project={top3[1]} left={false} />
 				<Typography variant="h6" align="center" sx={{ marginTop: 5 }}>
 					{text.Archive}
 				</Typography>

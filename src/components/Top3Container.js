@@ -23,7 +23,11 @@ export default function Top3Container({ Project, left }) {
 			<img
 				src={Img}
 				alt={Title[selectedLanguage]}
-				style={{ borderRadius: 4, width: 600 }}
+				style={{
+					borderRadius: 4,
+					width: 600,
+					boxShadow: '10px 10px #b8e7e7',
+				}}
 			/>
 			<Box
 				sx={{
@@ -125,6 +129,7 @@ export default function Top3Container({ Project, left }) {
 					height: 400,
 					position: 'absolute',
 					right: 0,
+					boxShadow: '-10px 10px #b8e7e7',
 				}}
 			/>
 			<Box

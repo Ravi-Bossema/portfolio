@@ -48,7 +48,7 @@ export default function Archive() {
 						target="_blank"
 						size="large"
 					>
-						<GitHub color="secondary" fontSize="inherit" />
+						<GitHub color="primary" fontSize="inherit" />
 					</IconButton>
 				) : null}
 				{params.value.url ? (
@@ -58,7 +58,7 @@ export default function Archive() {
 						target="_blank"
 						size="large"
 					>
-						<OpenInNew color="secondary" fontSize="inherit" />
+						<OpenInNew color="primary" fontSize="inherit" />
 					</IconButton>
 				) : null}
 				{params.value.play ? (
@@ -68,7 +68,7 @@ export default function Archive() {
 						target="_blank"
 						size="large"
 					>
-						<GooglePlay color="secondary" fontSize="inherit" />
+						<GooglePlay color="primary" fontSize="inherit" />
 					</IconButton>
 				) : null}
 				{params.value.play ? (
@@ -78,7 +78,7 @@ export default function Archive() {
 						target="_blank"
 						size="large"
 					>
-						<AppleStore color="secondary" fontSize="inherit" />
+						<AppleStore color="primary" fontSize="inherit" />
 					</IconButton>
 				) : null}
 			</>

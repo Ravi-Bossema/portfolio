@@ -17,11 +17,7 @@ export const top3 = [
 					Material UI library
 				</Link>,
 				' and hosted with ',
-				<Link
-					href="https://www.netlify.com"
-					target="_blank"
-					underline="hover"
-				>
+				<Link href="https://www.netlify.com" target="_blank" underline="hover">
 					Netlify
 				</Link>,
 				' .',
@@ -34,11 +30,7 @@ export const top3 = [
 					Material UI library
 				</Link>,
 				' en gehost met ',
-				<Link
-					href="https://www.netlify.com"
-					target="_blank"
-					underline="hover"
-				>
+				<Link href="https://www.netlify.com" target="_blank" underline="hover">
 					Netlify
 				</Link>,
 				' .',
@@ -47,6 +39,8 @@ export const top3 = [
 		Tech: ['React', 'JavaScript', 'CSS'],
 		Git: 'https://github.com/Ravi-Bossema/portfolio',
 		Url: '/',
+		Play: '',
+		Apple: '',
 		Img: portfolio,
 	},
 	{
@@ -57,38 +51,22 @@ export const top3 = [
 		Summary: {
 			English: [
 				'An implementation of underwater physics in the open-source ',
-				<Link
-					href="https://gazebosim.org"
-					target="_blank"
-					underline="hover"
-				>
+				<Link href="https://gazebosim.org" target="_blank" underline="hover">
 					3D Robotics Simulator Gazebo
 				</Link>,
 				', specifically in the ',
-				<Link
-					href="https://github.com/ci-group/revolve"
-					target="_blank"
-					underline="hover"
-				>
+				<Link href="https://github.com/ci-group/revolve" target="_blank" underline="hover">
 					Robot Evolution framework Revolve
 				</Link>,
 				'. This was the project I wrote my Bachelors thesis on which was very well received by the professors in the VU CI-group.',
 			],
 			Nederlands: [
 				'Een implementatie van de drijfkracht en weerstand in water in de open-source ',
-				<Link
-					href="https://gazebosim.org"
-					target="_blank"
-					underline="hover"
-				>
+				<Link href="https://gazebosim.org" target="_blank" underline="hover">
 					3D Robotica Simulator Gazebo
 				</Link>,
 				' specifiek in de ',
-				<Link
-					href="https://github.com/ci-group/revolve"
-					target="_blank"
-					underline="hover"
-				>
+				<Link href="https://github.com/ci-group/revolve" target="_blank" underline="hover">
 					Robot Evolutie framework Revolve
 				</Link>,
 				'. Over dit project heb ik mijn Bachelor scriptie geschreven waar ik een 9.0 voor gehaald heb.',
@@ -97,6 +75,8 @@ export const top3 = [
 		Tech: ['Python', 'C++', 'Gazebo', 'Revolve'],
 		Git: 'https://github.com/Ravi-Bossema/portfolio',
 		Url: thesis,
+		Play: '',
+		Apple: '',
 		Img: revolve,
 	},
 	{
@@ -107,8 +87,10 @@ export const top3 = [
 			Nederlands: '',
 		},
 		Tech: ['JavaScript', 'React Native', 'Node', 'Expo'],
-		Git: 'https://github.com/Ravi-Bossema/portfolio',
+		Git: '',
 		Url: 'https://thispersondoesnotexist.com',
+		Play: 'test',
+		Apple: 'test',
 		Img: test,
 	},
 ];

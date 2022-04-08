@@ -13,13 +13,9 @@ export const introText = {
 		Dev: 'Software Developer',
 		Body: [
 			'I design and build custom software solutions to various problems. ',
-			'I am currently developing mobile applications using React Native at ',
-			<Link
-				href="https://www.magnus.nl"
-				target="_blank"
-				underline="hover"
-			>
-				Magnus
+			'I am currently doing mainly back-end development at ',
+			<Link href="https://www.effectory.com" target="_blank" underline="hover">
+				Effectory
 			</Link>,
 			'.',
 		],
@@ -30,13 +26,9 @@ export const introText = {
 		Dev: 'Software Developer',
 		Body: [
 			'Ik ontwerp en ontwikkel op maat gemaakte software oplossingen voor verschillende problemen. ',
-			'Op het moment ontwikkel ik mobiele applicaties met React Native bij ',
-			<Link
-				href="https://www.magnus.nl"
-				target="_blank"
-				underline="hover"
-			>
-				Magnus
+			'Op het moment doe ik voornamelijk back-end development bij ',
+			<Link href="https://www.effectory.com" target="_blank" underline="hover">
+				Effectory
 			</Link>,
 			'.',
 		],
